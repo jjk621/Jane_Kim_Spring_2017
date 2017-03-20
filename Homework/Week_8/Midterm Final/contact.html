@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Website</title>
+<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+</head>
+
+<style type="text/css">
+body{
+	font-family: 
+}
+	*{
+		margin: 0;
+
+	}
+
+body,h1,h2,h3,h4,h5,h6 {
+						font-family: "Quattrocento Sans", sans-serif
+							}
+
+	body, html {
+		height: 100%;
+	}
+/* general */
+	.container{
+	background-color: white
+	}
+
+/* Footer */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* navbar */
+		.navbar{
+		background-color: rgba(0,0,0,.5);
+		height: 50px;
+		margin: auto;
+		list-style: none;
+		width: auto;
+
+	}
+
+	.navbar li{
+		float: right;
+	}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+.navbar li {
+    float: right;
+    border-right:1px solid #bbb;
+}
+
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+	
+/* contact */
+	.contact{
+		background-color: #F5F5DC
+
+
+	}
+	.things {
+		display: flex;
+		justify-content: space-between;
+  		text-align: center;
+  		margin-left: 60px;
+  		margin-right: 60px;
+}
+	}
+
+		</style>
+		<body>
+<!-- Navbar Container-->
+	<div class="container">
+
+		<div class="navbar">
+		<ul id="nav">
+			<div id="span"></div>
+			<li style="float: left;border-right: none;"><a href="home.html">Buns: Burger Joint</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="border-left:1px solid #bbb;"><a href="gallery.html">Gallery</a></li>
+			</ul>
+				</div>
+	<!-- Contact Container -->
+		<div class="contact">
+		
+		<br><center><h1>Contact</h1></center>
+		<br>
+
+	<div class="things">
+		<div> 
+			<h4><p>Location</p></h4>
+			<br>
+			<p>2 MetroTech Center</p>
+			<p>Brooklyn, NY 11201</p>
+			<p>(646) 997-3600</p>
+		</div>
+
+		<div>
+	  		<center><h4><p>Hours of Operation</p></h4>
+	  		<br>
+        	<p>Sunday 11 am - 12 am</p> 
+        	<h5><p>Monday - Wednesday Closed</p>
+	        <p>Thursday 12 pm - 12 am</p>
+	        <p>Friday 11 am - 2 am</p>
+	        <p>Saturday 11 am - 2 am</p>
+	        </h5>
+	        </center>
+	        <br>
+
+		</div>
+	</div>
+    <div id="googleMap"></div>
+
+				<center><div id="map" style="width:65%;height:370px"></div></center>
+				<br>
+				<br>
+
+				<script>
+				function myMap() {
+				  var myCenter = new google.maps.LatLng(40.693470, -73.985747);
+				  var mapCanvas = document.getElementById("map");
+				  var mapOptions = {center: myCenter, zoom: 15};
+				  var map = new google.maps.Map(mapCanvas, mapOptions);
+				  var marker = new google.maps.Marker({position:myCenter});
+				  marker.setMap(map);
+				}
+				</script>
+
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU52032VVc2hnaZzChyUzdExN93FAatk8&callback=myMap"></script>
+
+				  </div>
+				</div>
+	
+        
+        <br>
+
+    </div>		
+
+		</div>
+	<!-- Footer Container -->
+<br>
+<br>
+		<div class="footer">
+	<h6> 
+    <center><p> 
+      &copy; Buns
+
+      <a href="http://www.facebook.com/">
+          <img src="http://1.bp.blogspot.com/-XiLOdfhlkWM/VQLP0EKDrVI/AAAAAAAAXwM/tvzCwhKdxw4/s1600/F_icon.svg.png" style="width:20px;height:20px;border;"></a>
+
+      <a href="http://www.twitter.com/"><img src="http://cdn2.ubergizmo.com/wp-content/uploads/2015/10/twitter-logo.jpg" style="width:20px;height:20px;border;"></a>
+
+      <a href="http://www.instagram.com/"><img src="http://i.utdstc.com/icons/256/instagram-android.png" style="width:20px;height:20px;border;"></a>
+
+
+      <a href="http://www.pinterest.com/"><img src="https://gfycat.com/images/iframe/sharing-pinterest.svg" style="width:20px;height:20px;border;"></a>
+</p>
+</center>
+</h6>
+		</div>
+</footer>
+</body>
+</html>

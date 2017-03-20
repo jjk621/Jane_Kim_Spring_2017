@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Website</title>
+<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+</head>
+
+<style type="text/css">
+body{
+	font-family: 
+}
+	*{
+		margin: 0;
+
+	}
+
+body,h1,h2,h3,h4,h5,h6 {
+						font-family: "Quattrocento Sans", sans-serif
+							}
+
+	body, html {
+		height: 100%;
+	}
+/* general */
+	.container{
+	background-color: white
+	}
+
+/* Footer */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* navbar */
+		.navbar{
+		background-color: rgba(0,0,0,.5);
+		height: 50px;
+		margin: auto;
+		list-style: none;
+		width: auto;
+
+	}
+
+	.navbar li{
+		float: right;
+	}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+.navbar li {
+    float: right;
+    border-right:1px solid #bbb;
+}
+
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+	/* menu */
+
+
+	
+button.accordion {
+		    background-color: #B0C4DE ;
+		    color: #444;
+		    cursor: pointer;
+		    padding: 18px;
+		    width: 100%;
+		    border: none;
+		    text-align: left;
+		    outline: none;
+		    font-size: 15px;
+		    transition: 0.4s;
+		}
+
+		button.accordion.active, button.accordion:hover {
+		    background-color: #F0FFFF;
+		}
+
+		button.accordion:after {
+		    content: '\002B';
+		    color:  #f2e6ff;
+		    font-weight: bold;
+		    float: right;
+		    margin-left: 5px;
+		}
+
+		button.accordion.active:after {
+		    content: "\2212";
+		}
+
+		div.panel {
+		    padding: 0 18px;
+		    background-color: white ;
+		    max-height: 0;
+		    overflow: hidden;
+		    transition: max-height 0.2s ease-out;
+		}
+
+		</style>
+		<body>
+	<!-- Navbar Container-->
+	<div class="container">
+
+		<div class="navbar">
+		<ul id="nav">
+			<div id="span"></div>
+			<li style="float: left;border-right: none;"><a href="home.html">Buns: Burger Joint</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="border-left:1px solid #bbb;"><a href="gallery.html">Gallery</a></li>
+			</ul>
+				</div>
+<!-- Menu Container -->    
+<div class="Menu">
+<br>
+<center> <h1>Menu</h1> </center>
+<br>
+<button class="accordion">Burgers</button>
+<div class="panel">
+  <ul class=leaders>
+    <li><span>Hamburger</span>
+     <span>$8.00</span>
+    <li><span>Cheeseburger</span>
+     <span>$9.00</span>
+    <li><span>Veggie Burger</span>
+     <span>$8.50</span>
+    <li><span>Turkey Burger</span>
+     <span>$9.50</span>
+    <li><span>Mushroom Burger</span>
+     <span>$8.00</span>
+    <li><span>Grilled Cheese </span>
+     <span>$7.50</span>
+    <li><span>Breakfast Burger</span>
+     <span>$9.50</span>
+
+  </ul>
+</div>
+</div>
+
+<!-- Menu Style -->
+<style type="text/css">
+  ul.leaders {
+    max-width: 1500px;
+    padding: 10px;
+    overflow-x: hidden;
+    list-style: none}
+
+  ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+   ". . . . . . . . . . . . . . . . . . . . . . ."
+   ". . . . . . . . . . . . . . . . . . . . . . ."
+   ". . . . . . . . . . . . . . . . . . . . . . ."
+   ". . . . . . . . . . . . . . . . . . . . . . ."}
+  
+  ul.leaders span:first-child {
+      padding-right: 10px;
+      background: white}
+
+  
+  ul.leaders span + span {
+      float: right;
+      padding-left: 10px;
+      background: white}
+
+</style>
+
+<button class="accordion">Sides</button>
+<div class="panel">
+  <ul class=leaders>
+    <li><span>French Fries</span>
+     <span>$3.00</span>
+    <li><span>Cheese Fries</span>
+     <span>$3.50</span>
+    <li><span>Onion Rings</span>
+     <span>$3.00</span>
+    <li><span>Cheese filled Onion Rings</span>
+     <span>$3.50</span>
+  </ul>
+</div>
+
+<button class="accordion">Drinks</button>
+<div class="panel">
+  <ul class=leaders>
+    <li><span>Coke</span>
+     <span>$2.00</span>
+    <li><span>Diet Coke</span>
+     <span>$2.00</span>
+    <li><span>Coke Zero</span>
+     <span>$2.00</span>
+    <li><span>Sprite</span>
+     <span>$2.00</span>
+    <li><span>Lemonade</span>
+     <span>$2.50</span>
+  </ul>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+</body>
+<!-- Footer Container -->
+<br>
+<br>
+		<div class="footer">
+	<h6> 
+    <center><p> 
+      &copy; Buns
+
+      <a href="http://www.facebook.com/">
+          <img src="http://1.bp.blogspot.com/-XiLOdfhlkWM/VQLP0EKDrVI/AAAAAAAAXwM/tvzCwhKdxw4/s1600/F_icon.svg.png" style="width:20px;height:20px;border;"></a>
+
+      <a href="http://www.twitter.com/"><img src="http://cdn2.ubergizmo.com/wp-content/uploads/2015/10/twitter-logo.jpg" style="width:20px;height:20px;border;"></a>
+
+      <a href="http://www.instagram.com/"><img src="http://i.utdstc.com/icons/256/instagram-android.png" style="width:20px;height:20px;border;"></a>
+
+
+      <a href="http://www.pinterest.com/"><img src="https://gfycat.com/images/iframe/sharing-pinterest.svg" style="width:20px;height:20px;border;"></a>
+</p>
+</center>
+</h6>
+		</div>
+</footer>
+</html>
