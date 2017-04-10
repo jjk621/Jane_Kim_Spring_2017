@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Attempt</title>
+	<h1>Quiz!</h1>
+</head>
+<body>
+<!-- Questions -->
+
+<!-- Question 1: -->
+<div class="question1">
+	<h3>1. Who made this quiz?</h3>
+
+<div class="text1">Name:<input type="text" id="text1">
+</div>
+</div>
+
+<br>
+<button onclick="question1()">Check</button> 
+<p id="answer"></p>
+</body>
+
+<!-- Javascript for Am I Correct (Question 1) -->
+<script type="text/javascript">
+
+function question1() {
+    var person;
+    if (confirm ("Press OK if you want to see the answer, if not click cancel") == true) {
+        person= "Jane! Were you correct?";
+    } else {
+        person="Click Am I Correct when you're ready!"
+    }
+    document.getElementById("answer").innerHTML = person
+}
+
+</script>
+
+<!-- Question 2 -->
+
+<h3> 2. What is 4 + 6 <br><input type="text" id="question2"> <br> </h3>
+<button onclick="question2()">Check if your answer is correct?</button> 
+
+<!-- Question 2 Javascript  -->
+<script>
+function question2() {
+    var value = document.getElementById("question2").value;
+    if (value == 10) {
+        window.alert("You got it!");
+    } else {
+        window.alert("Try again.");
+    }
+}
+</script>
+
+<!-- Question 3 -->
+
+<form>
+	<h3>3. Which animal can survive longer without water?</h3>
+	<input type="radio" name="answer" id="True" checked="checked">Rat
+	<input type="radio" name="answer" id="False">Camel
+</form>
+<br>
+<button onclick="Question3()">Check</button>
+
+<script type="text/javascript">
+	function Question3() {
+		var x = document.getElementById ("True").checked;
+		document.getElementById("try").innerHTML = x;
+	}
+</script>
+<p id="try"></p>
+
+</body>
+</html>
+
