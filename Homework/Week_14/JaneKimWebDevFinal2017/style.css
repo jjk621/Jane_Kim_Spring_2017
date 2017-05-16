@@ -1,0 +1,395 @@
+    body{
+      font-family: Arial, sans-serif;
+      margin-top: 40px;
+      /* visibility: hidden; */
+      background-color: black;
+      color: #FFF;
+
+    }
+    #main{
+      margin: 0 auto;
+      width: 800px;
+    }
+    section{
+      height: 100vh;    
+    }
+    .classes, .gallery, .contact, h2{
+      font-size: 48px;
+      line-height: 30px;
+      text-align: center;
+      padding-top: 14px;
+    }
+
+    .about h2 {
+      font-size: 48px;
+      line-height: 30px;
+      text-align: left;
+      padding-top: 14px;
+    }
+
+    /* Parallax */
+
+    body, html {
+      height: 100%;
+    }
+
+    .home {
+      background-image: url('http://also.kottke.org/misc/images/elicia-edijanto-01.jpg');
+      height: 100%; 
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .classes {
+      background-image: url('http://www.thisiscolossal.com/wp-content/uploads/2017/03/anim-4.jpg');
+      height: 100%; 
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .contact {
+      background-image: url('http://www.thisiscolossal.com/wp-content/uploads/2015/01/Elicia-Edijanto-5.jpg');
+      height: 100%; 
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    /* navbar */
+    .sidenav{
+      position: fixed;
+      top: 35%;
+      right: 0px;
+      list-style-type: none;
+    }
+    .elevatorbuttons{
+      width: 55px;
+      padding: 10px;
+      margin-bottom: 1px;
+      background-color: #111;
+      border-left: 10px solid #333;
+      cursor: pointer;
+    }
+    .active{
+      color: #FFF;
+      border-left: 20px solid #FFF;
+      line-height: 30px;
+    }
+
+  /* Home Page */
+
+    .caption{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    }
+    .caption span.border {
+    background-color: #111;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 10px;
+    padding: 18px;
+    }
+
+    /* Classes Page */
+    .table{
+    float: left;
+    width: 33.3%;
+    padding: 40px;
+    margin-left: 40px;
+    position: center;
+
+
+    }
+
+    .price {
+        list-style-type: none;
+        border: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+
+    /* Add shadows on hover */
+    .price:hover {
+        box-shadow: 0 16px 18px 0 rgba(0,0,0,3)
+    }
+
+    /* Pricing header */
+    .price .header {
+        background-color: #111;
+        color: white;
+        font-size: 25px;
+    }
+
+    /* List items */
+    .price li {
+        border-bottom: 1px solid #eee;
+        color:  #404040;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Grey list item */
+    .price .grey {
+        background-color: #eee;
+        font-size: 20px;
+        color: #262626;
+    }
+    .price .classprices {
+      font-size: 20px;
+      color: #404040;
+    }
+
+    /* Gallery */
+    .row > .column {
+      padding: 0 10px;
+      margin-left: 36px;
+      margin-top: 80px;
+
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+      height: 25%;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: black;
+      margin: auto;
+      padding: 0;
+      width: 58%;
+      height: 125%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      margin-right: 60px;
+      margin-top: 40px;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .mySlides {
+      display: none;
+      width: 80%;
+      margin-left: 65px;
+
+    }
+
+    .cursor {
+      cursor: pointer
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 35%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: #404040;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 14px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    img {
+      margin-bottom: -4px;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .demo {
+      opacity: 0.6;
+      margin-left: 75px;
+    }
+
+    .active, .demo:hover {
+      opacity: 1;
+    }
+
+    img.hover-shadow {
+      transition: 0.3s
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+
+    /* Contact */
+      /* Style the tab */
+    div.tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    div.tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    div.tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    div.tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px transparent;
+        border-top: none;
+        margin-top: 30px;
+    }
+
+    /* Style the close button */
+    .topright {
+        float: right;
+        cursor: pointer;
+        font-size: 20px;
+        margin-right: 30px;
+    }
+
+    .topright:hover {color: red;}
+
+    .Mlocationtab{
+      float: left;
+      margin-left: 90px;
+    }
+
+    .Mlocationcontenttab{
+      font-size: 16px;
+    }
+
+    .Mhourstab{
+      float: right;
+      margin-right: 80px;
+      margin-top: -30px;
+
+    }
+    .Mhourscontenttab{
+      font-size: 16px;
+    }
+
+    .Blocationtab{
+      float: left;
+      margin-left: 90px;
+    }
+
+    .Blocationcontenttab{
+      font-size: 16px;
+    }
+
+    .Bhourstab{
+      float: right;
+      margin-right: 80px;
+      margin-top: -30px;
+
+    }
+    .Bhourscontenttab{
+      font-size: 16px;
+    }
+
+/* Footer */
+    .footer{
+      font-size: 18px;
+      text-align: center;
+      margin-top: 40px;
+      background-color: black; 
+      text-align: center; 
+      position: center;">
+      color: white;
+
+    }
