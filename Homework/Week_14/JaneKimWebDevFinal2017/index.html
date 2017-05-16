@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elevator Scroller</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+
+<body>
+
+<div class="elevator">
+<!-- vertical navigation for elevator buttons -->
+  <ul class="sidenav">
+    <li class="elevatorbuttons" id="homeBtn">Home</li>
+    <li class="elevatorbuttons" id="aboutBtn">About</li>
+    <li class="elevatorbuttons" id="classesBtn">Classes</li>
+    <li class="elevatorbuttons" id="galleryBtn">Gallery</li>
+    <li class="elevatorbuttons" id="contactBtn">Contact</li>
+
+  </ul>
+
+  <div id="main">
+    <section id="homePanel">
+      <div class="home">
+        <div class="caption">
+          <span class="border">Junction Studio
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="aboutPanel">
+      <div class="about">
+        <h2>About</h2>
+        <p style="line-height: 200%; font-size: 16px;">Junction Studio provides painting and pottery classes of all ages. Anyone can be an artist, and Junction Studio follows its motto of "Anyone can do it" to the fullest. Although we are relativly new, as we first opened in 2017, we make sure not to compromise enjoyment in our short hour long classes. It is important to us that you have fun while learning different art techniques. We currently have two locations. Our first studio was opened in Manhattan in 2016. We have been lucky enough to open up our second studio in Brooklyn in 2017. 
+        <br>
+        <br>
+      Classes are offered 7 days a week, with a bunch of one and two day classes in specific techniques and a bunch of 6 week project based classes.  Private lessons are available for individuals or for groups, especially good for specialized training.  We are also available for project consulting. Classes are offered 7 days a week, with a bunch of one and two day classes in specific techniques and a bunch of 6 week project based classes. We’ve got 4,000 square feet full of tools, the expertise to match, and a lot more patience than your seventh grade art teacher, so come on down to Junction Studio for your first class!
+      </p>
+      </div>
+    </section>
+
+
+    <section id="classesPanel">
+      <div class="classes">
+        <h2>Classes</h2>
+          <div class="table">
+            <ul class="price">
+              <li class="header">Painting</li>
+              <li class="grey">$ 150 / Unlimited Monthly</li>
+              <li class="classprices">$ 15 / 1 Class</li>
+              <li class="classprices">$ 130 / 10 Classes</li>
+              <li class="classprices">$ 200 / 20 Classes</li>
+            </ul>
+          </div>
+          <div class="table">
+            <ul class="price">
+              <li class="header">Pottery</li>
+              <li class="grey">$ 150 / Unlimited Monthly</li>
+              <li class="classprices">$ 15 / 1 Class</li>
+              <li class="classprices">$ 130 / 10 Classes</li>
+              <li class="classprices">$ 200 / 20 Classes</li>
+            </ul>
+      </div>
+    </section>
+
+
+    <section id="galleryPanel">
+      <div class="gallery">
+        <h2>Gallery</h2>
+          <div class="row">
+            <div class="column">
+              <img src="http://3.bp.blogspot.com/-21b9cm2k84k/WP3Mwe_Sx3I/AAAAAAAAE5M/6zhEmQ-GKWM_P6ypdmpI_Y6WiOUvVzdiwCK4B/s1600/finn2%2B-%2B1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="http://www.thesignatureshop.com/shop/images/product/m/masa-sasaki-princess-mug-porcelain-325-x-475-x-4%E2%80%9D.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+              <img src="http://www.oilpaintingsea.com/products/small/new_style_oil_paintings/music_instrument/ybt001.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+              <div class="mySlides">
+                <div class="numbertext">1 / 3</div>
+                <img src="http://3.bp.blogspot.com/-21b9cm2k84k/WP3Mwe_Sx3I/AAAAAAAAE5M/6zhEmQ-GKWM_P6ypdmpI_Y6WiOUvVzdiwCK4B/s1600/finn2%2B-%2B1.jpg" style="width:100%;">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 3</div>
+                <img src="http://www.thesignatureshop.com/shop/images/product/m/masa-sasaki-princess-mug-porcelain-325-x-475-x-4%E2%80%9D.png" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 3</div>
+                <img src="http://www.oilpaintingsea.com/products/small/new_style_oil_paintings/music_instrument/ybt001.jpg" style="width:100%">
+              </div>
+              
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+
+              <div class="column">
+                <img class="demo cursor" src="http://3.bp.blogspot.com/-21b9cm2k84k/WP3Mwe_Sx3I/AAAAAAAAE5M/6zhEmQ-GKWM_P6ypdmpI_Y6WiOUvVzdiwCK4B/s1600/finn2%2B-%2B1.jpg" style="width:100%" onclick="currentSlide(1)" alt="(2017) <em> Geometric </em> By Holly Frank">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.thesignatureshop.com/shop/images/product/m/masa-sasaki-princess-mug-porcelain-325-x-475-x-4%E2%80%9D.png" style="width:100%" onclick="currentSlide(2)" alt="(2017) <em> Space </em> by Sophia Sanchez">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.oilpaintingsea.com/products/small/new_style_oil_paintings/music_instrument/ybt001.jpg" style="width:100%" onclick="currentSlide(3)" alt="(2016) <em> Music </em> by Justin Miller">
+              </div>
+
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+
+    <section id="contactPanel">
+      <div class="contact">
+        <h2>Contact</h2>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Manhattan')" id="defaultOpen">Manhattan</button>
+          <button class="tablinks" onclick="openCity(event, 'Brooklyn')">Brooklyn</button>
+        </div>
+
+        <div id="Manhattan" class="tabcontent">
+          <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+            <div class="Mlocationtab"> 
+              <h3 class="Mlocationcontenttab">Location</h3>
+              <p class="Mlocationcontenttab">726 Broadway</p>
+              <p class="Mlocationcontenttab">New York, NY 10003</p>
+              <p class="Mlocationcontenttab">(212) 998-4678</p>
+            </div>
+                    <br>
+            <div class="Mhourstab"> 
+              <h3 class="Mhourscontenttab">Hours</h3>
+                <p class="Mhourscontenttab">Sunday 10 am - 8 pm </p>
+                <p class="Mhourscontenttab">Monday - Friday 12 pm- 9 pm </p>
+                <p class="Mhourscontenttab">Saturday 9 am - 8 pm</p>
+            </div>
+        </div>
+
+        <div id="Brooklyn" class="tabcontent">
+          <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+            <div class="Blocationtab"> 
+              <h3 class="Blocationcontenttab">Location</h3>
+              <p class="Blocationcontenttab">2 MetroTech Center</p>
+              <p class="Blocationcontenttab">Brooklyn, NY 11201</p>
+              <p class="Blocationcontenttab">(646) 997-3600</p>
+            </div>
+                    <br>
+            <div class="Bhourstab"> 
+              <h3 class="Bhourscontenttab">Hours</h3>
+                <p class="Bhourscontenttab">Sunday 12 am - 6 pm </p>
+                <p class="Bhourscontenttab">Monday - Friday 11 pm- 8 pm </p>
+                <p class="Bhourscontenttab">Saturday 10 am - 9 pm</p>
+            </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+// Elevator Scroll 
+
+$(document).ready(function() { 
+
+      // Make the items animate and fade in on load
+      TweenLite.from('body', 0.5, { autoAlpha: 0 }); 
+      TweenLite.from('elevator', 0.5, { right: -500, delay:0.5}); 
+
+      // grab each button by id and pass to variables
+      // grab an array of list items for an event listener
+      var $homeBtn = $('#homeBtn'),
+      $aboutBtn = $('#aboutBtn'),
+      $classesBtn = $('#classesBtn'),
+      $galleryBtn = $('#galleryBtn'),
+      $contactBtn = $('#contactBtn'),
+      $navButtons = $('.elevatorbuttons');
+      
+      // add and remove a class with a tween programatically
+      $navButtons.mouseenter(function(){
+        TweenLite.to(this, 0.2, { className: '+=active'});
+      });
+      // add and remove a class with a tween programatically
+      $navButtons.mouseleave(function(){
+        TweenLite.to(this, 0.2, { className: '-=active'});
+      });
+      // set the scroll position to the top of each floor element
+      // jQuery.offset() returns a positon object with the properties top and left
+      console.log($('#homePanel').offset());
+      console.log($('#homePanel').offset().top);
+      // assign an html5 custom data attribute to each of our buttons that stores the number of pixels we need to animate down/up to which we calc using .offset().top
+      $homeBtn.attr('data-scrollPos', $('#homePanel').offset().top);
+      $aboutBtn.attr('data-scrollPos', $('#aboutPanel').offset().top);
+      $classesBtn.attr('data-scrollPos', $('#classesPanel').offset().top);
+      $galleryBtn.attr('data-scrollPos', $('#galleryPanel').offset().top);
+      $contactBtn.attr('data-scrollPos', $('#contactPanel').offset().top);
+      // using a click event listener on each of the nav buttons li array
+      // scroll to the stored position which we retreive from our data-attribute
+      $navButtons.click(function(){
+
+        // retrieve the clicked buttons scrollPos number
+        var myScrollPosition = $(this).attr('data-scrollPos');
+        console.log(myScrollPosition);
+        TweenLite.to(window, 1, { scrollTo: myScrollPosition,});
+      });
+      var initialFloor = $(homeBtn).attr('data-scrollPos');
+      TweenLite.to(window, 1, {scrollTo: initialFloor});
+    });
+    
+// Gallery Page
+
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// Contact
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</script>
+</script>
+
+    <!-- Footer -->
+        <footer>
+          <br>
+          <br>
+          <br>
+          <div class="footer"> 
+                <center><p style="position: center;"> 
+                  &copy; Junction Studio 
+                <br>
+                <br>
+                      <a class="facebook" href="http://www.facebook.com/">
+                          <img src="http://1.bp.blogspot.com/-XiLOdfhlkWM/VQLP0EKDrVI/AAAAAAAAXwM/tvzCwhKdxw4/s1600/F_icon.svg.png" style="width:20px;height:20px;border;"></a>
+
+                      <a class="twitter" href="http://www.twitter.com/"><img src="http://cdn2.ubergizmo.com/wp-content/uploads/2015/10/twitter-logo.jpg" style="width:20px;height:20px;border;"></a>
+
+                      <a class="instagram" href="http://www.instagram.com/"><img src="http://i.utdstc.com/icons/256/instagram-android.png" style="width:20px;height:20px;border;"></a>
+
+
+                      <a class="pinterest" href="http://www.pinterest.com/"><img src="https://gfycat.com/images/iframe/sharing-pinterest.svg" style="width:20px;height:20px;border;"></a>
+
+                </p>
+                <br>
+                <br>
+                </center>
+                </h6>
+                </footer>
+
+
+</body>
+</html>
